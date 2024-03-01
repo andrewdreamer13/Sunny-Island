@@ -1,11 +1,17 @@
 /* Header styles */
 header{
   width: 100%;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 100px;
+ padding: 10px;
+ @include   flex-between-column(column) ;
+  // gap: 100px;
+
+  h2 {
+     font-family:$title-font ;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 1.1;
+    max-width: 655px;
+  }
 }
 
 .burger {

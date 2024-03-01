@@ -1,3 +1,5 @@
+// mixin for fonts
+
 @mixin font-face($font-family, $url, $weight, $style) {
   @font-face {
     font-family: "#{$font-family}";
@@ -6,4 +8,46 @@
     font-display: swap;
     font-style: $style;
   }
+}
+
+// mixins are declared with @mixin and then called with '@include mixin-name()'
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// mixins with parameters. Parameters can be an variables from vars folder or can be by default
+
+@mixin flex-between-column($direction) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin flex-center($direction: row) { // default value
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+// mixin for rotation elements with parameters.Parameters are written in style file as arguments
+
+@mixin rotation($deg) {
+  transform: rotate($deg);
+}
+
+// mixins with variables
+
+@mixin font-size($min: 16, $max: 60) { // default values of min and max
+  font-size: clamp(#{$min}px, #{$max / 1920 * 100}vw, #{$max}px);
 }

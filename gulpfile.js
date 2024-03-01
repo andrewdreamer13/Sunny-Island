@@ -41,7 +41,7 @@ let isProd = false; // dev by default
 const paths = {
   html: {
     // src: 'src/**/index.html',
-    src: 'src/*.html',
+    src: 'src/**/*.html',
     dest: 'dist'
   },
   styles: {
@@ -65,9 +65,10 @@ const paths = {
   },
 
   images: {
-    src: 'src/img/**/*.{jpg,jpeg,png,gif,ico,webp,mp4,webm}',
+    src: 'src/img/**/*.{jpg,jpeg,png,gif,ico,webp,mp4,webm,avif}',
     dest: 'dist/img'
   },
+  
   svgSprites: {
     src: 'src/img/svg/*.svg',
     dest: 'dist/img/svg'
@@ -124,7 +125,7 @@ function html() {
     }))
     .pipe(replace(/@img\//g, 'img/'))
     .pipe(htmlmin({
-      collapseWhitespace: true
+      collapseWhitespace: false // true
     }))
     .pipe(size())
     .pipe(gulp.dest(paths.html.dest))
