@@ -233,14 +233,14 @@ function img() {
 const svgSprites = () => {
   return gulp.src(paths.svgSprites.src)
 
-    .pipe(cheerio({
-			run: function ($) {
-				$('[fill]').removeAttr('fill');
-				$('[stroke]').removeAttr('stroke');
-				$('[style]').removeAttr('style');
-			},
-			parserOptions: {xmlMode: true}
-		}))
+    // .pipe(cheerio({
+		// 	run: function ($) {
+		// 		$('[fill]').removeAttr('fill');
+		// 		$('[stroke]').removeAttr('stroke');
+		// 		$('[style]').removeAttr('style');
+		// 	},
+		// 	parserOptions: {xmlMode: true}
+		// }))
 
     .pipe(
       svgmin({

@@ -1,12 +1,21 @@
 /* global styles*/
 
 body{
-  font-family: $font-regular;
+  font-family:$text-font ;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 400;
   font-size: 20px;
-  line-height: 1.6;
-  color: rgb(22, 46, 228);
-  background-color: $color4;
+  line-height: 1.5;
+  color: $text-color1;
+  background-color: $body-color;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1230px;
+  padding: 0 15px;
+  border:1px solid green;
+
 }
 
