@@ -41,7 +41,8 @@ let isProd = false; // dev by default
 const paths = {
   html: {
     // src: 'src/**/index.html',
-    src: 'src/**/*.html',
+    // src: 'src/**/*.html',
+    src: 'src/html/**/*.html',
     dest: 'dist'
   },
   styles: {
@@ -65,7 +66,7 @@ const paths = {
   },
 
   images: {
-    src: 'src/img/**/*.{jpg,jpeg,png,gif,ico,webp,mp4,webm,avif}',
+    src: 'src/img/**/*.{jpg,jpeg,png,gif,ico,webp,mp4,webm,avif,svg}',
     dest: 'dist/img'
   },
   

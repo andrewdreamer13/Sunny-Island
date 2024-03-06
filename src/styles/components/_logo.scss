@@ -1,30 +1,4 @@
-.logo {
-  width: 164px;
-  height: 139px;
-  position: relative;
-  overflow: hidden;
-  // border:1px solid red;
-
-  .svg {
-    position: absolute;
-  }
-
-  &__cloud {
-    width: 185px;
-    left: -35px;
-    top: -4px;
-  }
-  &__letters {
-    left: -65px;
-    top: -5px;
-  }
-  &__sun {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    left: 38px;
-    top: 35px;
-  }
-}
+.logo {}
+ 
 
 

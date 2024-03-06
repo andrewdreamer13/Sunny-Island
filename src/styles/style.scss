@@ -1,13 +1,15 @@
 
-@import "font-mixin";
-@import "fonts";
-@import "reset";
-@import "_vars";
-@import "preloader";
-@import "swiper";
-@import "global";
-@import "header";
+@import "./global/font-mixin";
+@import "./global/fonts";
+@import "./global/reset";
+@import "./global/vars";
+@import "./global/preloader";
+@import "./global/global";
+@import "./libs/swiper";
 @import "./components/logo";
-@import "modal";
-@import "footer";
+@import "./components/burger";
+@import "./components/buttons";
+@import "./sections/header";
+@import "./sections/modal";
+@import "./sections/footer";
 
