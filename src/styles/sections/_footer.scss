@@ -1,9 +1,44 @@
-footer {
+.footer {
+  width: 100%;
+}
 
-  h1 {
-     font-family: $text-font;
-     font-weight: 800;
-     font-size: 50px;
-     font-style: italic;
+.footer__inner {
+  width: 100%;
+  padding: 30px 0 30px 0;
+  @include flex-between;
+  gap: 20px;
+   flex-wrap: wrap;
+  border: 1px solid red;
+}
+
+.footer__column {
+  @include flex-between;
+  flex-wrap: wrap;
+  gap:20px;
+}
+
+.footer__logo {
+}
+.footer__link {
+}
+
+.privacy-policy {
+}
+.privacy-policy__text {
+  display: block;
+  font-style: italic;
+  font-size: clamp(0.75rem, 0.65rem + 0.5vw, 1.25rem);
+  font-weight: 300;
+  line-height: 1.2;
+  color: $text-color1;
+}
+
+.footer__button {
+}
+
+
+@media (max-width:850px) {
+  .footer__inner {
+    flex-direction: column;
   }
 }

@@ -8,7 +8,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background:#383B45;
+  background:$color1;
   z-index: 100;
   display: grid;
   place-content: center;
@@ -17,11 +17,17 @@
 .loader {
   display: grid;
   place-content: center;
+  // background-color: #fff;
+  background-image: url('../img/preloader.svg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  
   width: 125px;
   height: 125px;
-  border: solid 10px rgba(0,0,0, 0.1);
-  border-radius: 50%;
-  border-left-color: rgba(255,255,255, 0.7);
+  // border: solid 10px rgba(0,0,0, 0.1);
+  // border-radius: 50%;
+  // border-left-color: rgba(255,255,255, 0.7);
   animation: load 1.3s linear infinite;
 }
 

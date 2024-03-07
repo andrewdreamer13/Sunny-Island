@@ -39,12 +39,7 @@
 .nav__list-right {
   justify-content: flex-end;
 }
-.nav__item {
-  transition: all .3s;
-  &:hover {
-  transform: translateY(-5px);
-  }
-}
+
 .nav__link {
   font-weight: 700;
   font-size: 21px;
@@ -53,7 +48,6 @@
 
   &:hover {
     color:$color2;
-  transform: translateY(-5px);
   }
 }
 
@@ -76,78 +70,6 @@
   margin-top: -74px;
 }
 
-.phone {
-  @include flex-center;
-  gap: 10px;
-
-  &:hover .phone__svg {
-   animation: dialing 1s linear 0.3s infinite ;
-   }
-}
-.phone__svg {
-  width: 24px;
-  height: 24px;
-  fill: $text-color1;
-  transform: scale(1);
-}
-.phone__number {
-  font-weight: 700;
-  font-size: clamp(1rem, 0.925rem + 0.375vw, 1.375rem);
-  color: $text-color1;
-}
-
-@keyframes dialing {
-  0% {
-   transform: scale(1.2);
-  }
-  25% {
-    transform: scale(1.3);
-   }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-  
-}
-
-.social {
-  @include flex-center;
-  gap: 10px;
-
-  &:hover .social__svg{
-    animation: dialing 1s linear 0.3s infinite ;
-    }
-}
-.social__svg-box {
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  @include flex-center;
-  background: radial-gradient(
-    230.93% 230.93% at 102.01% 2.03%,
-    rgb(249, 237, 50) 0%,
-    rgb(238, 42, 123) 36.000001430511475%,
-    rgb(210, 42, 138) 43.99999976158142%,
-    rgb(139, 42, 178) 60.00000238418579%,
-    rgb(27, 42, 240) 82.99999833106995%,
-    rgb(0, 42, 255) 87.99999952316284%
-  );
-}
-.social__svg {
-  width: 20px;
-  height: 20px;
-  fill: $body-color;
-}
-.social__text {
-  max-width: 127px;
-  font-style: italic;
-  font-weight: 300;
-  font-size: clamp(1rem, 0.975rem + 0.125vw, 1.125rem);
-  line-height: 1.11111;
-  color: $text-color1;
-}
 
 .header__button {
   margin-left: auto;
@@ -191,11 +113,12 @@
     top: 0;
     right: 0;
     transition: 0.7s;
-    max-width: 480px;
-    height: 100vh;
+    width: 100vw;
+    height: 100dvh;
     flex-direction: column;
     justify-content:flex-start;
-    transform: translateX(100%);
+    // transform: translateX(100%);
+    translate: 100% 0 0;
     padding: 100px 0 0 0;
     background-color: $color1;
     z-index: 5;
@@ -203,7 +126,8 @@
   }
 
   .untranslate {
-    transform: translateX(0);
+    // transform: translateX(0);
+    translate: 0 0 0;
   }
 
   .nav__list {
