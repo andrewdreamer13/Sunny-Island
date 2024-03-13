@@ -1,0 +1,118 @@
+.main-hero {
+  position: relative;
+  width: 100%;
+  padding: 29px 0 320px 0;
+   background: url('../img/main-hero-bottom-bg.svg') 100% 105% / contain no-repeat,
+              url('../img/hero-bg-characters1.png') 100% 105% / 945px  no-repeat,
+  $color1;
+  translate: 0 -1px 0;
+}
+
+
+.main-hero__content {
+  width: clamp(290px, 13.012rem + 25.56vw, 630px);
+  //  border:1px solid;
+}
+.main-hero__title {
+  margin-bottom: 15px;
+}
+.main-hero__info {
+  width: 100%;
+  @include flex-center-mix(space-between,flex-start,row);
+  gap: 10px;
+  margin-bottom: 47px;
+  // border:1px solid;
+
+}
+.main-hero__info-card {
+  width: 100%;
+  max-width: 161px;
+  @include flex-center-mix(flex-start,center,column);
+  //  border:1px solid;
+}
+
+.main-hero__svg {
+  width: 71px;
+   height: 50px;
+  stroke:$body-color;
+  margin-bottom: 30px;
+}
+.main-hero-info-text {
+  font-weight: 700;
+  font-size: clamp(12px, 0.482rem + 1.19vw, 22px);
+  text-align: center;
+  color: $text-color1;
+  line-height: 1.36;
+}
+
+@media (max-width:1450px) {
+  .main-hero {
+     padding-bottom: clamp(100px, 2.356rem + 19.47vw, 320px);
+     background: url('../img/main-hero-bottom-bg.svg') 100% 101% / contain no-repeat,
+                url('../img/hero-bg-characters1.png') 100% 105% / 64%  no-repeat,
+    $color1;
+  }
+}
+
+@media (max-width:950px) {
+  .main-hero {
+    padding-bottom:clamp(13.438rem, 10.104rem + 16.67vw, 20rem) ;
+   }
+}
+
+@media (max-width: 1100px) {
+ .main-hero__info {
+    margin-bottom:37px;
+  
+  }
+
+  .main-hero__svg {
+    width: 61px;
+    height: 42px;
+    margin-bottom: 18px;
+  }
+}
+
+@media (max-width: 850px) {
+  .main-hero__svg {
+    width: 51px;
+    height: 36px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width:650px) {
+  .main-hero {
+     background: url('../img/main-hero-bottom-bg.svg') 100% 101% / contain no-repeat,
+                url('../img/hero-bg-characters1.png') 100% 105% / 67%  no-repeat,
+    $color1;
+   }
+}
+
+@media (max-width: 480px) {
+
+  .main-hero {
+    background: url('../img/main-hero-bottom-bg.svg') 100% 101% / contain no-repeat,
+               url('../img/hero-bg-characters1.png') 100% 105% / 70%  no-repeat,
+   $color1;
+ }
+
+  .main-hero__info {
+    margin-bottom:27px;
+  
+  }
+
+  .main-hero__svg {
+    width: 41px;
+    height: 28px;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width:390px) {
+  .main-hero {
+    background: url('../img/main-hero-bottom-bg.svg') 100% 101% / contain no-repeat,
+    url('../img/hero-bg-characters1.png') 100% 105% / 72%  no-repeat,
+$color1;
+  }
+}

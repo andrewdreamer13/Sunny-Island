@@ -17,7 +17,6 @@
 .loader {
   display: grid;
   place-content: center;
-  // background-color: #fff;
   background-image: url('../img/preloader.svg');
   background-size: cover;
   background-position: center center;
@@ -25,9 +24,6 @@
   
   width: 125px;
   height: 125px;
-  // border: solid 10px rgba(0,0,0, 0.1);
-  // border-radius: 50%;
-  // border-left-color: rgba(255,255,255, 0.7);
   animation: load 1.3s linear infinite;
 }
 

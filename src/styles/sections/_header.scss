@@ -6,6 +6,8 @@
   // left: 0;
   width: 100%;
   padding: 20px 0 33px 0;
+   background-color: $color1;
+   z-index: 2;
 }
 
 .header__nav-box {
@@ -41,13 +43,29 @@
 }
 
 .nav__link {
+  position: relative;
   font-weight: 700;
   font-size: 21px;
   color: $text-color1;
   transition: all .3s;
 
   &:hover {
-    color:$color2;
+    color:transparent;
+  }
+
+  &::after {
+    content:attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 3px;
+    width: 0;
+    overflow: hidden;
+    color:$text-color3;
+    transition: all .3s;
+  }
+
+  &:hover::after {
+    width: 100%;
   }
 }
 

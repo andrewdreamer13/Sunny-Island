@@ -7,8 +7,7 @@ body{
   font-size: 20px;
   // line-height: 1.5;
   color: $text-color1;
-  // background-color: $body-color;
-  background-color: $color1;;
+  background-color: $body-color;
 }
 
 .container {
@@ -16,7 +15,21 @@ body{
   width: 100%;
   max-width: 1215px;
   padding: 0 15px;
-  // border:1px solid green;
-
+  //  border:1px solid green;
 }
 
+.main-title {
+  font-family: "Balsamiq Sans", sans-serif;
+  font-weight: 700;
+  font-size: clamp(33px, 1.431rem + 3.16vw, 75px);
+  line-height: 1;
+  color: $text-color3;
+}
+
+.section-title {
+  font-family: "Balsamiq Sans", sans-serif;
+  font-weight: 700;
+  font-size: clamp(30px, 1.455rem + 2.1vw, 60px);
+  line-height: 1.16667;
+
+}
