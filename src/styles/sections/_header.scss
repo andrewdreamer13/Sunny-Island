@@ -141,6 +141,7 @@
     background-color: $color1;
     z-index: 5;
     overflow: hidden;
+    border-left: 10px solid $color2;
   }
 
   .untranslate {

@@ -3,12 +3,12 @@
 window.addEventListener('DOMContentLoaded', () => {
 
   const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
-    let swiper;
+     let swiper;
 
     breakpoint = window.matchMedia(breakpoint);
 
     const enableSwiper = function(className, settings) {
-      swiper = new Swiper(className, settings);
+       swiper = new Swiper(className, settings);
 
       if (callback) {
         callback(swiper);
@@ -41,12 +41,13 @@ window.addEventListener('DOMContentLoaded', () => {
   // Swiper initialization
 
   resizableSwiper(
-    '(max-width: 650px)',
+    '(max-width: 950px)',
     '.format__inner',
     {
+      loop:true,
       spaceBetween: 10,
       slidesPerView: 'auto',
-      // centeredSlides:true,
+      centeredSlides:true,
       speed:500,
       pagination: {
         el: '.swiper-pagination',

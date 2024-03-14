@@ -2,7 +2,6 @@
   position: relative;
   width: 100%;
   background-color: $body-color;
-  margin-top: -125px;
 }
 
 .format__title {
@@ -25,15 +24,15 @@
   grid-template-columns: repeat(auto-fit,280px);
   place-content: center;
   gap:20px;
-
+  // transform-style: preserve-3d ;
   
 }
 .format__card {
   position: relative;
   width: 280px;
   aspect-ratio: 1.047 / 1;
-  background-color: $body-color;
   user-select: none;
+  // transform-style: preserve-3d ;
   //  border:1px solid;
 }
 
@@ -44,7 +43,9 @@
   width: 225px;
   height: 220px;
   padding: 37px 0 50px 20px;
-  border-radius: 10px 10px 0 10px;
+  border-radius: 10px;
+  transition: all .5s;
+  // transform-style: preserve-3d ;
   background:url('../img/format-decor1.svg')  0 0 / contain no-repeat,
              linear-gradient(313deg, #ab11db 0%, #c784f9 100%);
   // z-index: 2;
@@ -60,10 +61,18 @@
     // z-index: 2;
     opacity: 0;
     transition: all .3s;
+    // transform-style: preserve-3d ;
   }
+
+  // .format__card:hover & {
+  //   translate: 10px 5px 0;
+  //   transition: all .5s;
+  // }
 
   .format__card:hover &::after {
     opacity: 1;
+    // transform-style: preserve-3d ;
+    // transform:translate3d(0,0,100px);
     // rotate: 360deg;
   }
 }
@@ -168,7 +177,6 @@
   color: $text-color2;
   z-index: 2;
 
-
 }
 
 .format__button {
@@ -179,8 +187,10 @@
   border-radius: 90px 0 180px 90px;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
   overflow: hidden;
-  z-index: 2;
   transition: all .3s;
+  z-index: 2;
+  // transform-style: preserve-3d;
+  // transform:translate3d(0,0,130px);
 
   font-weight: 400;
   font-size: 18px;
@@ -190,6 +200,7 @@
     color: $text-color3;
     letter-spacing: 1px; 
     transition-delay: .2s;
+    
   }
 
   &::after {
@@ -209,6 +220,10 @@
   &:hover::after {
     width: 100%;
   }
+
+  // .format__card:hover & {
+  //   translate: 0 0 10px;
+  // }
 }
 
 .format__img {
@@ -217,18 +232,20 @@
   bottom: 0;
   right: 0;
   transition: all .5s;
+  // transform-style: preserve-3d ;
   // touch-action: none;
     pointer-events: none;
 
 
   .format__card:hover & {
    scale:1.06;
-   translate: -10px -5px 0;
+  //  transform:translate3d(-10px, -5px, 120px);
+    translate: -10px -5px 0;
     // filter: drop-shadow(5px 0 10px $modal-bg);
   }
 }
 
-@media (max-width:650px) {
+@media (max-width:950px) {
 
  .format__inner {
     height: 320px;
@@ -270,6 +287,11 @@
     }
 
     .swiper-slide-active {
+
+      // .format__card-inner {
+      //   translate: 10px 5px 0;
+      //   transition: all .5s;
+      // }
 
       .format__card-inner::after {
         opacity: 1;
