@@ -1,0 +1,254 @@
+.programs {
+  padding: 40px 0 0 0;
+  width: 100%;
+  background: url("../img/catalog-bg.svg") top center / 100% 100% no-repeat;
+}
+
+.programs__title {
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.programs__inner {
+  width: 100%;
+  margin-bottom: 47px;
+}
+
+.programs__cards-track {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(240px, 280px));
+  place-content: center;
+  gap: 20px;
+}
+
+.animator-card {
+}
+
+.programs__button-box {
+  width: 100%;
+  @include flex-center-mix(center, center, row);
+  margin-bottom: 53px;
+}
+
+.programs__button {
+  display: inline-block;
+}
+
+.programs__teens {
+}
+
+.teens {
+  width: 100%;
+  min-height: 560px;
+  border-radius: 30px;
+  background: url("../img/teens-bg.svg") 0 0 / 52% 100% no-repeat, $color3;
+}
+
+.teens__inner {
+  width: 100%;
+  height: 100%;
+  min-height: 560px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.teens__title-box {
+  max-width: 100%;
+  height: 100%;
+  padding: 65px 0 0 70px;
+  @include flex-center-mix(space-between, flex-start, column);
+}
+
+.teens__title {
+  color: $text-color2;
+  margin-bottom: 6px;
+  margin-left: -14px;
+  max-width: 380px;
+}
+
+.teens__img-box {
+  width: 100%;
+  max-width: 346px;
+  aspect-ratio: 1 / 1.06;
+}
+
+.teens__img-box-clone {
+  display: none;
+}
+
+.teens__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.teens__content-box {
+  max-width: 540px;
+  padding: 65px 56px 75px 0;
+}
+
+.teen__content {
+  font-weight: 400;
+  font-size: clamp(14px, -0.0357rem + 1.7143vw, 20px);
+  line-height: 1.5;
+  color: $text-color2;
+  margin-bottom: 30px;
+}
+
+.teens__button {
+  display: inline-block;
+}
+
+@media (max-width: 1500px) {
+  .programs {
+    width: 100%;
+    background: url("../img/catalog-bg.svg") center center / contain repeat;
+  }
+}
+
+@media (max-width: 1100px) {
+  .programs__inner {
+    width: 100%;
+    padding-top: 20px;
+
+    .swiper-pagination {
+      position: relative;
+      width: 100%;
+      height: 20px;
+      @include flex-center-mix(center, center, row);
+
+      &-bullet {
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        margin: 0;
+        margin: 0 5px;
+        background-color: rgba($color2, 0.2);
+        transition: all 0.3s;
+
+        &-active {
+          width: 30px;
+          border-radius: 8px;
+          background-color: $color2;
+        }
+      }
+    }
+  }
+  .programs__cards-track {
+    //  height: 300px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 0;
+    margin-bottom: 20px;
+    border: 1px solid;
+    .swiper-wrapper {
+      display: flex;
+    }
+
+    .swiper-slide {
+      flex-shrink: 1;
+    }
+
+    .swiper-slide-active {
+      .programs__card-inner::after {
+        opacity: 1;
+      }
+      .animator__img {
+        scale: 1.06;
+        transform-origin: bottom;
+      }
+
+      .animator__inner::after {
+        opacity: 1;
+      }
+
+      .animator__decor {
+        filter: blur(1px);
+      }
+
+      .animator__decor1 {
+        translate: 8px 8px 0;
+      }
+
+      .animator__decor2 {
+        translate: 8px -8px 0;
+      }
+
+      .animator__decor3 {
+        translate: -8px -8px 0;
+      }
+
+      .animator__decor4 {
+        translate: -8px 8px 0;
+      }
+
+      .animator__name {
+        translate: 0 -8px 0;
+        color: $text-color3;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .teens__title-box {
+    padding: 40px 0 0 50px;
+    @include flex-center-mix(space-between, flex-start, column);
+  }
+
+  .teens__title {
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+
+  .teens__content-box {
+    padding: 40px 50px 50px 0;
+    @include flex-center-mix(center, flex-start, column);
+  }
+}
+
+@media (max-width: 850px) {
+  .teens {
+    margin: 0 auto;
+    width: 90%;
+    min-height: 560px;
+    border-radius: 30px;
+    background: url("../img/teens-bg.svg") 0 0 / 70% 100% no-repeat, $color3;
+  }
+  .teens__inner {
+    grid-template-columns: 1fr;
+    padding: 20px 20px 0 20px;
+  }
+
+  .teens__title-box {
+    padding: 0;
+    @include flex-center-mix(space-between, flex-start, column);
+  }
+
+  .teens__title {
+    margin-left: 0;
+  }
+
+  .teens__content-box {
+    max-width: 540px;
+    padding: 0;
+    @include flex-center-mix(center, space-between, column);
+  }
+
+  .teen__content {
+    font-size: clamp(14px, 0.7241rem + 0.7547vw, 18px);
+  }
+
+  .teens__img-box {
+    display: none;
+  }
+
+  .teens__img-box-clone {
+    display: block;
+  }
+
+  .teens__button {
+    margin-bottom: 20px;
+  }
+}

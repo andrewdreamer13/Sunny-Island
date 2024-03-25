@@ -41,7 +41,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Swiper initialization
 
   resizableSwiper(
-    '(max-width: 950px)',
+    '(max-width: 1250px)',
     '.format__inner',
     {
       loop:true,
@@ -56,6 +56,49 @@ window.addEventListener('DOMContentLoaded', () => {
     },
      someFunc
   );
+
+  resizableSwiper(
+    '(max-width: 1100px)',
+    '.programs__inner',
+    {
+      loop:true,
+      spaceBetween: 10,
+      slidesPerView: 'auto',
+      centeredSlides:true,
+      speed:500,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    },
+     someFunc
+  );
+
+  resizableSwiper(
+    '(max-width: 850px)',
+    '.catalog__inner',
+    {
+      //  loop:true,
+      // parallax:true,
+      spaceBetween: 10,
+      // slidesPerGroup:'auto',
+      slidesPerView: 'auto',
+      // initialSlide: 2,
+      // grid: {
+      //   rows:1,
+      //    fill:'row'
+      // },
+      //  centeredSlides:true,
+      speed:500,
+      pagination: {
+        el: '.swiper-pagination',
+        // clickable: true,
+         dynamicBullets: true,
+      },
+    },
+     someFunc
+  );
+  
 
 });
 

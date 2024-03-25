@@ -1,0 +1,119 @@
+.catalog {
+  position: relative;
+  width: 100%;
+  .container {
+    max-width: 1245px;
+    // padding: 0 60px 0 15px;
+    
+  }
+
+  .swiper {
+   
+    border:1px solid;
+
+  }
+  
+  .swiper-slide {
+    width: clamp(240px, 2.5rem + 18.1818vw, 280px);
+    aspect-ratio: 1 /1.35;
+  }
+}
+
+.catalog__inner {
+ 
+}
+
+.catalog__inner-track {
+  display: grid;
+  grid-template-columns: repeat(4,minmax(240px, 280px));
+  place-content: center;
+  gap:20px;
+  .swiper-wrapper {
+   
+  }
+ 
+}
+  .swiper-slide {
+    // flex-shrink: 1;
+   } 
+
+
+
+
+@media (max-width:1100px) {
+  .catalog__inner-track {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(220px, 240px));
+    place-content: center;
+    gap:20px;
+    // transform-style: preserve-3d ;
+  }
+}
+
+@media (max-width:850px) {
+
+  .catalog__inner {
+    // height: 730px;
+     width: 100%;
+    .swiper-wrapper {
+      // min-width: 100%;
+      //  display: flex;
+      //  flex-wrap: wrap;
+    }
+    .swiper-pagination {
+      position: relative;
+      width: 100%;
+      height: 20px;
+      @include flex-center-mix(center,center,row);
+  
+      &-bullet {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        margin: 0;
+        margin: 0 5px;
+        background-color: rgba($text-color1, .2);
+  
+        &-active {
+          background-color: $color1;
+        }
+      }
+    }
+
+    // .swiper-pagination-bullets {
+    //   width: 100%;
+    //   height: 20px;
+    //   @include flex-center-mix(center,center,row);
+
+    //   &-bullet {
+    //     width: 15px;
+    //     height: 15px;
+    //     border-radius: 50%;
+    //     margin: 0;
+    //     margin: 0 5px;
+    //     background-color: rgba($text-color1, .2);
+  
+    //     &-active {
+    //       background-color: $color1;
+    //     }
+    // }
+  }
+ 
+  .catalog__inner-track {
+    // grid-template-columns: repeat(13,minmax(240px, 280px));
+    // align-content: start;
+    // min-width: 0;
+    display: flex;
+    //  flex-wrap: wrap;
+    justify-content: flex-start;
+     margin-bottom: 20px;
+    
+
+    .swiper-slide {
+        flex-shrink: 1;
+       height:100%;
+      // flex-wrap: wrap;
+      background-color: #4b82c4;
+    }
+  }
+}
